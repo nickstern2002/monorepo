@@ -2,6 +2,7 @@ package firstModule
 
 import (
 	"fmt"
+	"github.com/mazen160/go-random"
 )
 
 func straightAddition(num1, num2 int) int {
