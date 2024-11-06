@@ -1,0 +1,21 @@
+{
+  "name": "monorepo",
+  "version": "0.0.1",
+  "description": "monorepo",
+  "repository": "https://github.com/nickstern2002/monorepo",
+  "private": true,
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "preset": "conventionalcommits"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "semantic-release": "^24.2.0",
+    "semantic-release-monorepo": "^8.0.2"
+  }
+}
