@@ -16,7 +16,7 @@ func TestStraightAddition(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		result := straightAddition(tt.num1, tt.num2)
+		result := StraightAddition(tt.num1, tt.num2)
 		if result != tt.expected {
 			t.Errorf("straightAddition(%d, %d) = %d; want %d", tt.num1, tt.num2, result, tt.expected)
 		}

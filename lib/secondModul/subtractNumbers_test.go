@@ -17,7 +17,7 @@ func TestStraightSubtraction(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		result := straightSubtraction(tt.num1, tt.num2)
+		result := StraightSubtraction(tt.num1, tt.num2)
 		if result != tt.expected {
 			t.Errorf("straightSubtraction(%d, %d) = %d; want %d", tt.num1, tt.num2, result, tt.expected)
 		}

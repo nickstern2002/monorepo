@@ -5,11 +5,13 @@ import (
 	"go.uber.org/zap"
 )
 
-func straightSubtraction(num1, num2 int) int {
+// StraightSubtraction subtracts num2 from num1 then returns the result
+func StraightSubtraction(num1, num2 int) int {
 	return num1 - num2
 }
 
-func logWithZap(num int) {
+// LogWithZap logs num with a zap logger
+func LogWithZap(num int) {
 	logger, err := zap.NewProduction()
 	if err != nil {
 		fmt.Println(err)

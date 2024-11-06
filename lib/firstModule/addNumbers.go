@@ -5,11 +5,13 @@ import (
 	"github.com/mazen160/go-random"
 )
 
-func straightAddition(num1, num2 int) int {
+// StraightAddition adds two numbers
+func StraightAddition(num1, num2 int) int {
 	return num1 + num2
 }
 
-func randomNum() string {
+// RandomNum actually returns a string
+func RandomNum() string {
 	string, err := random.String(3)
 	if err != nil {
 		fmt.Println(err)
