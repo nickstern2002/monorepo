@@ -1,13 +1,13 @@
-name: Semantic Predictor
+name: Predict Semantic Release
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
 jobs:
-  predict-semantic-release:
-    name: predict-semantic-release
+  predict-semantic-output:
+    name: predict-semantic-output
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -26,11 +26,17 @@ jobs:
         with:
           node-version: 20.14
 
-      - name: Run Semantic Predictor
+      - name: Run Semantic Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
+          cd ./lib/firstModule
+          npm i
+          echo "Deps installed"
+          npx semantic-release --dry-run
+          cd ../secondModul
           npm i
           npx semantic-release --dry-run
+
 
 
