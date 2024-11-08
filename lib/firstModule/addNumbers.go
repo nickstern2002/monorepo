@@ -10,7 +10,7 @@ func StraightAddition(num1, num2 int) int {
 	return num1 + num2
 }
 
-// RandomNum actually returns a string lol
+// RandomNum actually returns a string lol xD
 func RandomNum() string {
 	string, err := random.String(3)
 	if err != nil {

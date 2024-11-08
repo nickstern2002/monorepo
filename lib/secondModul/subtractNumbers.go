@@ -10,7 +10,7 @@ func StraightSubtraction(num1, num2 int) int {
 	return num1 - num2
 }
 
-// LogWithZap logs num with a zap logger. This is definitely relevent
+// LogWithZap logs num with a zap logger. This is definitely relevent xD
 func LogWithZap(num int) {
 	logger, err := zap.NewProduction()
 	if err != nil {
