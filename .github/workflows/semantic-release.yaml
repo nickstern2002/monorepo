@@ -26,16 +26,20 @@ jobs:
         with:
           node-version: 20.14
 
-      - name: Run Semantic Release
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v4
+        id: First Module
+        with:
+          working_directory: ./lib/firstModule
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          cd ./lib/firstModule
-          npm i
-          echo "Deps installed"
-          npx semantic-release
-          cd ../secondModul
-          npm i
-          npx semantic-release
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v4
+        id: Second Module
+        with:
+          working_directory: ./lib/secondModul
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
 
