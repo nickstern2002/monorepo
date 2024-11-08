@@ -1,0 +1,36 @@
+name: Semantic Predictor
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  predict-semantic-release:
+    name: predict-semantic-release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      packages: read
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.14
+
+      - name: Run Semantic Predictor
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm i
+          npx semantic-release --dry-run
+
+
