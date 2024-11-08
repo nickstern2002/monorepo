@@ -33,10 +33,10 @@ jobs:
           cd ./lib/firstModule
           npm i
           echo "Deps installed"
-          npx semantic-release
+          npx semantic-release --debug
           cd ../secondModul
           npm i
-          npx semantic-release
+          npx semantic-release --debug
 
 
 
