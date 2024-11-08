@@ -1,8 +1,8 @@
 {
-  "name": "monorepo",
+  "name": "secondmodul",
   "version": "0.0.1",
   "description": "monorepo",
-  "repository": "https://github.com/nickstern2002/monorepo",
+  "repository": "https://github.com/nickstern2002/monorepo/lib/secondModul",
   "private": true,
   "release": {
     "extends": "semantic-release-monorepo",
