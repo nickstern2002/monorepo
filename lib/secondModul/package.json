@@ -10,6 +10,7 @@
       "main"
     ],
     "preset": "conventionalcommits",
+    "tagFormat": "v${version}-secondModul",
     "plugins": [
       [
         "@semantic-release/commit-analyzer",
