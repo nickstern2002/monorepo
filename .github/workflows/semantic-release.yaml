@@ -24,16 +24,15 @@ jobs:
         with:
           node-version: 20.14
 
-      - name: Install dependencies
-        run: npm i
-
       - name: Run Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd ./lib/firstModule
+          npm i
           npx run semantic-release -e semantic-release-monorepo
           cd ../secondModul
+          npm i
           npx run semantic-release -e semantic-release-monorepo
 
 
