@@ -1,0 +1,80 @@
+{
+  "name": "firstModule",
+  "version": "0.0.1",
+  "description": "monorepo",
+  "repository": "https://github.com/nickstern2002/monorepo/lib/firstModule",
+  "private": true,
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "preset": "conventionalcommits",
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "releaseRules": [
+            {
+              "type": "feat",
+              "release": "minor"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "type": "chore",
+              "release": "patch"
+            },
+            {
+              "type": "docs",
+              "release": "patch"
+            },
+            {
+              "type": "style",
+              "release": "patch"
+            },
+            {
+              "type": "refactor",
+              "release": "patch"
+            },
+            {
+              "type": "perf",
+              "release": "patch"
+            },
+            {
+              "type": "test",
+              "release": "patch"
+            },
+            {
+              "type": "ci",
+              "release": "patch"
+            },
+            {
+              "type": "build",
+              "release": "patch"
+            }
+          ]
+        }
+      ],
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "echo \"BUILD_VERSION=\\\"v${nextRelease.version}\\\"\" > artifacts.env"
+        }
+      ],
+      "@semantic-release/github",
+      "semantic-release-gha-output"
+    ]
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "semantic-release": "^24.2.0",
+    "semantic-release-gha-output": "1.1.0",
+    "semantic-release-monorepo": "^8.0.2"
+  }
+}
