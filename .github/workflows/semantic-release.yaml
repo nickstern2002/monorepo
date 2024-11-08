@@ -30,6 +30,10 @@ jobs:
       - name: Run Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release --debug
+        run: |
+          cd ./lib/firstModule
+          npx run semantic-release -e semantic-release-monorepo
+          cd ../secondModul
+          npx run semantic-release -e semantic-release-monorepo
 
 
