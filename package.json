@@ -1,7 +1,7 @@
 {
-  "name": "secondmodul",
+  "name": "monorepo",
   "version": "0.0.1",
-  "description": "monorepo subtraction modul",
+  "description": "monorepo",
   "repository": "https://github.com/nickstern2002/monorepo/",
   "private": true,
   "release": {

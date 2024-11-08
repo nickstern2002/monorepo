@@ -1,7 +1,7 @@
 {
   "name": "firstmodule",
   "version": "0.0.1",
-  "description": "monorepo",
+  "description": "monorepo addition module",
   "repository": "https://github.com/nickstern2002/monorepo/",
   "private": true,
   "release": {
