@@ -2,7 +2,7 @@
   "name": "firstmodule",
   "version": "0.0.1",
   "description": "monorepo addition module",
-  "repository": "https://github.com/nickstern2002/monorepo/",
+  "repository": "https://github.com/nickstern2002/monorepo.git",
   "private": true,
   "release": {
     "extends": "semantic-release-monorepo",
