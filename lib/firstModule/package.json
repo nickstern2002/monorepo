@@ -1,10 +1,11 @@
 {
-  "name": "nodepool-operator",
+  "name": "monorepo",
   "version": "0.0.1",
-  "description": "nodepool-operator",
-  "repository": "https://github.com/coreweave/nodepool-operator",
+  "description": "monorepo",
+  "repository": "https://github.com/nickstern2002/monorepo",
   "private": true,
   "release": {
+    "extends": "semantic-release-monorepo",
     "branches": [
       "main"
     ],

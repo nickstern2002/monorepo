@@ -30,9 +30,10 @@ jobs:
         run: |
           cd ./lib/firstModule
           npm i
-          npx run semantic-release -e semantic-release-monorepo
+          echo "Deps installed"
+          npx run semantic-release
           cd ../secondModul
           npm i
-          npx run semantic-release -e semantic-release-monorepo
+          npx run semantic-release
 
 
