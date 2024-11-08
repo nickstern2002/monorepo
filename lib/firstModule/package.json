@@ -65,8 +65,8 @@
           "prepareCmd": "echo \"BUILD_VERSION=\\\"v${nextRelease.version}\\\"\" > artifacts.env"
         }
       ],
-      "semantic-release-gha-output",
-      "@semantic-release/github"
+      "@semantic-release/github",
+      "semantic-release-gha-output"
     ]
   },
   "devDependencies": {
